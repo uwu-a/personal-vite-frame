@@ -22,8 +22,5 @@ git clone https://github.com/uwu-a/personal-vite-frame.git
 cd personal-vite-frame
 npm install
 
-2. Lauch
-
-```bash
 npm run dev
 npm run build
