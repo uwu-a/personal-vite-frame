@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+# Personal Vue 3 + Vite Template
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a personal basic template to help you quickly get started developing with **Vue 3** and **TypeScript** using **Vite**.  
+It comes pre-configured with commonly used tools and libraries:
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+- [Element Plus](https://element-plus.org/) – UI Component Library
+- [Vue Router](https://router.vuejs.org/) – Routing
+- [Pinia](https://pinia.vuejs.org/) – State Management
+- [Axios](https://axios-http.com/) – HTTP Client
+- SCSS embbeded support – for styling
+
+## Recommended Project Setup
+
+Learn more about the recommended project setup and IDE support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+
+## Usage
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/uwu-a/personal-vite-frame.git
+cd personal-vite-frame
+npm install
+
+2. Lauch
+
+```bash
+npm run dev
+npm run build
