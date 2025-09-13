@@ -11,6 +11,7 @@ interface Data<T> {
 async function calling<T>(promise: Promise<AxiosResponse<T>>): Promise<T | null> {
     try {
         const res = await promise
+        assertCode(res.data)
         return res.data
     } catch (err) {
         notifyError(err as string)
@@ -18,13 +19,18 @@ async function calling<T>(promise: Promise<AxiosResponse<T>>): Promise<T | null>
     }
 }
 
-export function check() {
-    return calling<Data<{
-        status: string
-    }>>(
-        instance.post('/api/status', {
-            key: 'check',
-            exp: '20250907'
+function assertCode(data: unknown) {
+    const maybe = data as Partial<Data<unknown>>;
+
+    if (maybe && maybe.code != 200)
+        throw new Error(maybe.message || 'Error occurred');
+}
+
+export function login({account, password}: { account: string; password: string }) {
+    return calling<Data<boolean>>(
+        instance.post('/login', {
+            'account': account,
+            'password': password
         })
     )
 }
