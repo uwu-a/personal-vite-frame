@@ -8,6 +8,7 @@ It comes pre-configured with commonly used tools and libraries:
 - [Pinia](https://pinia.vuejs.org/) – State Management
 - [Axios](https://axios-http.com/) – HTTP Client
 - SCSS embbeded support – for styling
+- Vue I18n – Internationalization
 
 ## Recommended Project Setup
 
